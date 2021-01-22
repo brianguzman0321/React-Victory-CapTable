@@ -1,0 +1,19 @@
+.MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+  color: #000 !important;
+}
+.MuiAutocomplete-option {
+  color: #000;
+}
+.MuiAutocomplete-inputRoot {
+  height: 42px;
+  display: flex;
+  align-content: center;
+  color: #000 !important;
+}
+
+.MuiTextField-root {
+  border-radius: 5px;
+}
+.MuiAutocomplete-noOptions {
+  display: none;
+}
