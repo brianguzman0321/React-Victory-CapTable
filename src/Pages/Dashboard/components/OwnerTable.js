@@ -36,8 +36,8 @@ const OwnerTable = ({ ownerDetailedLists, removeOwnerInfo }) => {
         name,
         ownerType: OWNER_TYPES_LIST.find(e => e.ownerTypeId === ownerType).ownerTypeDesc,
         shareAmount,
-        perShareVal: `$ ${perShareVal.toFixed(2)}`,
-        ownerPercent: `${(ownerPercent * 100).toFixed(2)} %`,
+        perShareVal: Number(perShareVal.toFixed(2)),
+        ownerPercent: Number((ownerPercent * 100).toFixed(2)),
         date: getAccurateDate(date),
         edit: (
           <IconButton onClick={() => openEditModal(id)}>
@@ -71,6 +71,9 @@ const OwnerTable = ({ ownerDetailedLists, removeOwnerInfo }) => {
     },
     {
       name: 'Ownership %',
+      renderAs: function (data) {
+        return `${data.name} is in a ${data.mood} mood.`;
+      },
     },
     {
       name: 'Date Issued',
