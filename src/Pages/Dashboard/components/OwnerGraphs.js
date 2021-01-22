@@ -16,7 +16,8 @@ const OwnerGraphs = ({ ownerLists, totalValue }) => {
   const ownerDetailedLists = ownerLists.map(e => {
     return {
       x: e.name,
-      y: ((e.perShareVal * e.shareAmount) / totalValue) * 100,
+      // y: ((e.perShareVal * e.shareAmount) / totalValue) * 100,
+      y: (e.shareAmount / totalValue) * 100,
       z: e.ownerType,
     };
   });

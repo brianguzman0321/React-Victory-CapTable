@@ -33,14 +33,16 @@ const Dashboard = ({ ownerLists, history, classes }) => {
   };
 
   const totalValue = sumBy(ownerLists, object => {
-    return object.perShareVal * object.shareAmount;
+    // return object.perShareVal * object.shareAmount;
+    return object.shareAmount;
   });
 
   const ownerDetailedLists = ownerLists.map(e => {
     return {
       ...e,
       ownerValue: e.perShareVal * e.shareAmount,
-      ownerPercent: (e.perShareVal * e.shareAmount) / totalValue,
+      // ownerPercent: (e.perShareVal * e.shareAmount) / totalValue,
+      ownerPercent: e.shareAmount / totalValue,
     };
   });
 

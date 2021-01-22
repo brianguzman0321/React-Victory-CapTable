@@ -38,7 +38,7 @@ const SubmitForm = ({
 
   useEffect(() => {
     const { name, ownerType, shareAmount, perShareVal, date } = companyInfo;
-    if (name && ownerType && shareAmount && perShareVal && date) {
+    if (name && ownerType && shareAmount && perShareVal > 0 && date) {
       setDisableBtn(false);
     } else {
       setDisableBtn(true);
